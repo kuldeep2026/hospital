@@ -1,0 +1,305 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: white;
+}
+
+p {
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;   /* 🔥 makes it stick */
+    top: 0;             /* stick at top */
+    z-index: 1000;      /* stay above everything */
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background: rgba(2, 6, 23, 0.7);   /* semi-transparent */
+    backdrop-filter: blur(10px);       /* glass effect */
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    color: #cbd5f5;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6366f1;
+}
+
+.signin {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.signin:hover {
+    transform: scale(1.05);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero h1 {
+    font-size: 60px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #94a3b8;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* BUTTONS */
+.buttons button {
+    margin: 10px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    color: white;
+    border: none;
+}
+
+.primary:hover {
+    transform: scale(1.05);
+}
+
+.secondary {
+    border: 1px solid #6366f1;
+    background: transparent;
+    color: white;
+}
+
+.secondary:hover {
+    background: #6366f1;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.sub {
+    color: #a5b4fc;
+    line-height: 1.6;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* 💎 CARD (ALL SAME COLOR BUT PREMIUM) */
+.card {
+    position: relative;
+    background: linear-gradient(145deg, rgba(30,41,59,0.9), rgba(15,23,42,0.9));
+    padding: 25px;
+    border-radius: 18px;
+    text-align: left;
+    transition: 0.4s;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(99,102,241,0.2);
+    overflow: hidden;
+}
+
+/* ✨ SHINY EFFECT */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.08),
+        transparent
+    );
+    transform: rotate(25deg);
+    transition: 0.5s;
+}
+
+/* ✨ SHINE ON HOVER */
+.card:hover::before {
+    left: 100%;
+}
+
+/* 💥 HOVER GLOW */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0px 15px 40px rgba(99,102,241,0.25);
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    border-top: 1px solid #334155;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    max-width: 300px;
+}
+
+.footer-left img {
+    width: 45px;
+    margin-bottom: 10px;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: #6366f1;
+}
+
+/* ✨ ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌌 DARK PREMIUM ANIMATED BACKGROUND */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #020617; /* deep dark base */
+    color: white;
+}
+
+/* Animated glow */
+.bg-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(99,102,241,0.25), transparent),
+        radial-gradient(circle at 80% 30%, rgba(139,92,246,0.2), transparent),
+        radial-gradient(circle at 50% 80%, rgba(14,165,233,0.15), transparent);
+    z-index: -1;
+    animation: moveBg 18s infinite alternate ease-in-out;
+    filter: blur(120px);
+    opacity: 0.4;
+}
+
+/* Smooth slow movement */
+@keyframes moveBg {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    100% {
+        transform: translate(60px, -40px) scale(1.1);
+    }
+}
+
+.secondary-btn {
+    display: inline-block;          /* IMPORTANT */
+    padding: 12px 25px;
+    border: 1px solid #6366f1;
+    border-radius: 8px;
+    color: #6366f1;
+    text-decoration: none;          /* removes underline */
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* ✨ Hover effect */
+.secondary-btn:hover {
+    background: #6366f1;
+    color: white;
+}
+
+.primary-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(90deg,#6366f1,#8b5cf6);
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: scale(1.05);
+}

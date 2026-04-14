@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Doctor Dashboard</title>
+<link rel="stylesheet" href="doctor.css">
+</head>
+
+<body>
+
+<!-- BACK BUTTON -->
+<a href="home.html" class="back-btn">← Back</a>
+
+<!-- HEADER -->
+<div class="top-bar">
+    <h1>Doctor Dashboard</h1>
+    <a href="login.html" class="logout-btn">Logout</a>
+</div>
+
+<p class="subtitle">Manage your profile and verification status</p>
+
+<!-- CARDS -->
+<div class="stats">
+
+    <div class="card">
+        <h3>Total Patients</h3>
+        <p id="patients">—</p>
+    </div>
+
+    <div class="card">
+        <h3>Experience</h3>
+        <p id="experience">—</p>
+    </div>
+
+</div>
+
+<!-- VERIFICATION SECTION -->
+<div class="verify-box">
+
+    <h2>⚠ Verification Required</h2>
+    <p>Please upload your medical credentials to get verified</p>
+
+    <label>Medical License</label>
+    <input type="file">
+
+    <label>Degree Certificate</label>
+    <input type="file">
+
+    <label>Government ID Proof</label>
+    <input type="file">
+
+    <button class="submit-btn">Submit for Verification</button>
+
+</div>
+
+<script src="doctor.js"></script>
+
+</body>
+</html>

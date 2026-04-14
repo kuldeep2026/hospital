@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auth - Predictive Healthcare</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<div class="bg-animation"></div>
+
+<a href="home.html" class="back-btn">← Back</a>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+
+        <div class="logo">
+            <img src="assets/logo.png">
+            <h2>Predictive <span>Healthcare</span></h2>
+        </div>
+
+        <div class="left-card">
+            <h3>For Patients</h3>
+            <p>Get instant disease predictions based on your symptoms</p>
+        </div>
+
+        <div class="left-card">
+            <h3>For Doctors</h3>
+            <p>Manage your profile and connect with patients</p>
+        </div>
+
+        <div class="left-card">
+            <h3>For Admins</h3>
+            <p>Oversee platform operations and approvals</p>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+        <div class="form-box">
+
+            <h2 id="title">Welcome Back</h2>
+            <p>Sign in to continue to Predictive Healthcare</p>
+
+            <!-- LOGIN / SIGNUP -->
+            <div class="toggle">
+                <button class="active" onclick="switchMode('login', event)">Login</button>
+                <button onclick="switchMode('signup', event)">Sign Up</button>
+            </div>
+
+            <!-- ROLE -->
+            <div class="roles">
+                <button class="active" onclick="switchRole('user', event)">User</button>
+                <button onclick="switchRole('doctor', event)">Doctor</button>
+                <button onclick="switchRole('admin', event)">Admin</button>
+            </div>
+
+            <!-- INFO -->
+            <div class="info-box" id="infoText">
+                Access symptom analysis and find doctors
+            </div>
+
+            <!-- FORM -->
+            <form>
+
+                <!-- NAME -->
+                <div class="form-group" id="nameField" style="display:none;">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" id="email" placeholder="you@example.com">
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="••••••••">
+                </div>
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-group" id="confirmField" style="display:none;">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="••••••••">
+                </div>
+
+                <!-- DOCTOR FIELDS -->
+                <div id="doctorFields" style="display:none;">
+
+                    <div class="form-group">
+                        <label>Medical License Number</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Specialization</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Experience</label>
+                        <input type="number" id="experienceInput">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hospital / Clinic</label>
+                        <input type="text">
+                    </div>
+
+                </div>
+
+                <!-- DISCLAIMER -->
+                <div class="note" id="doctorNote" style="display:none;">
+                    ⚠️ Doctor accounts require admin approval before activation.
+                </div>
+
+                <!-- EXTRA -->
+                <div class="form-extra">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <!-- SUBMIT -->
+                <button type="button" onclick="handleAuth()" id="submitBtn">
+                    Sign In as User
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>

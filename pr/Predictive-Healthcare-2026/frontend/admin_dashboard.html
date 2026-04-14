@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<a href="home.html" class="back-btn">← Back</a>
+
+<div class="top-bar">
+    <h1>Admin Dashboard</h1>
+    <a href="login.html" class="logout-btn">Logout</a>
+</div>
+
+<p class="subtitle">Manage users, verify doctors, and oversee platform operations</p>
+
+<!-- STATS -->
+<div class="stats">
+
+    <div class="card">
+        <h3>Total Users</h3>
+        <h1>1,284</h1>
+        <p>+12% from last month</p>
+    </div>
+
+    <div class="card">
+        <h3>Verified Doctors</h3>
+        <h1>47</h1>
+        <p>Active on platform</p>
+    </div>
+
+    <div class="card">
+        <h3>Pending Approvals</h3>
+        <h1>2</h1>
+        <p>Requires review</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Analyses</h3>
+        <h1>3,542</h1>
+        <p>This month</p>
+    </div>
+
+</div>
+
+<!-- VERIFICATIONS -->
+<div class="verify-section">
+
+    <h2>🩺 Pending Doctor Verifications</h2>
+    <p>Review and approve doctor registration requests</p>
+
+    <!-- CARD 1 -->
+    <div class="doctor-card">
+
+        <div class="top">
+            <div>
+                <h3>Dr. Sarah Johnson</h3>
+                <p>sarah.j@hospital.com</p>
+            </div>
+            <span>Submitted: 2026-03-20</span>
+        </div>
+
+        <div class="details">
+            <div>
+                <label>Specialization</label>
+                <p>Cardiologist</p>
+            </div>
+
+            <div>
+                <label>License Number</label>
+                <p>MED-12345</p>
+            </div>
+
+            <div>
+                <label>Hospital/Clinic</label>
+                <p>City General Hospital</p>
+            </div>
+        </div>
+
+        <div class="docs">
+            <span>Medical License.pdf</span>
+            <span>Degree Certificate.pdf</span>
+            <span>ID Proof.pdf</span>
+        </div>
+
+        <div class="actions">
+            <button class="view">View Documents</button>
+            <button class="approve">Approve</button>
+            <button class="reject">Reject</button>
+        </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="doctor-card">
+
+        <div class="top">
+            <div>
+                <h3>Dr. Michael Chen</h3>
+                <p>michael.c@clinic.com</p>
+            </div>
+            <span>Submitted: 2026-03-19</span>
+        </div>
+
+        <div class="details">
+            <div>
+                <label>Specialization</label>
+                <p>Neurologist</p>
+            </div>
+
+            <div>
+                <label>License Number</label>
+                <p>MED-67890</p>
+            </div>
+
+            <div>
+                <label>Hospital/Clinic</label>
+                <p>Central Medical Center</p>
+            </div>
+        </div>
+
+        <div class="docs">
+            <span>Medical License.pdf</span>
+            <span>Degree Certificate.pdf</span>
+        </div>
+
+        <div class="actions">
+            <button class="view">View Documents</button>
+            <button class="approve">Approve</button>
+            <button class="reject">Reject</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+<script src="admin.js"></script>
+</html>
